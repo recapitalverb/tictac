@@ -18,7 +18,7 @@ storage {
     /// Keeps track of each player move.
     board: StorageMap<u64, Identity> = StorageMap {},
     /// Keeps track of the move counter for various checks (win, draw, etc.).
-    move_counter: u64 = 0,
+    move_counter: u64 = 10,
     /// The first player of the game.
     player_one: Option<Identity> = Option::None,
     /// The current player turn.
@@ -45,9 +45,9 @@ impl Game for Contract {
 
         // Once a game has been played we need to reset all values.
         let mut position = 0;
-        while position < 9 {
+        while position < 19 {
             let _ = storage.board.remove(position);
-            position += 1;
+            position += 10;
         }
         storage.move_counter.write(0);
         storage.state.write(State::Playing);
