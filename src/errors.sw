@@ -12,6 +12,7 @@ pub enum GameStateError {
 pub enum PlayerError {
     /// It is not the player's turn.
     IncorrectPlayerTurn: (),
+     IncorrectPlayerTurn2: (),
 }
 
 /// Errors related to the position of a cell.
