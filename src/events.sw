@@ -8,6 +8,16 @@ pub struct GameDrawnEvent {
     player_two: Identity,
 }
 
+/// Event for when a game results in a draw.
+pub struct MultiGameDrawnEvent {
+    /// The first player.
+    player_one: Identity,
+    /// The second player.
+    player_two: Identity,
+    player_three: Identity,
+}
+
+
 /// Event for when a game is won.
 pub struct GameWonEvent {
     /// The winning player.
