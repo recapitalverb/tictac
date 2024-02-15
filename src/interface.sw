@@ -1,5 +1,6 @@
 library;
 
+
 abi Game {
     /// Starts a new game.
     ///
