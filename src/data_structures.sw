@@ -10,6 +10,7 @@ pub enum State {
     Ended: (),
 }
 
+
 impl Eq for State {
     fn eq(self, other: Self) -> bool {
         match (self, other) {
